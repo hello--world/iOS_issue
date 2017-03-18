@@ -35,9 +35,15 @@ static TestManager *_manager;
     self = [super init];
     if (self) {
         // 调用了该方法，内部[TestManager sharedManager]，导致sharedManager 还没有执行完
-        [TestModel fetchWith:^(BOOL issue) {
-            NSLog(@"%@",@(issue));
-        }];
+        // 相当于 [TestManager sharedManager];
+        // 或者异步调用
+//        dispatch_async(dispatch_get_main_queue(), ^{
+        
+            [TestModel fetchWith:^(BOOL issue) {
+                NSLog(@"%@",@(issue));
+                self.issue = issue;
+            }];
+//        });
     }
     return self;
 }
