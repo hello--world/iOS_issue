@@ -4,4 +4,6 @@
 ### GCD
 
 * [dispatch_once创建单列](./Demo/dispatch_onceDemo)
-* [静态tableview使用](./Demo/StaticTableView/)
+
+### UITableView
+* [静态TableView使用](./Demo/StaticTableView/)
