@@ -7,3 +7,6 @@
 
 ### UITableView
 * [静态TableView使用](./Demo/StaticTableView/)
+
+### UIButton
+* [Button Type使用中可能遇到的问题](./Demo/ButtonType)
